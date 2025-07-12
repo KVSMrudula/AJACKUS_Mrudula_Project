@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add/Edit Employee</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="modal">
+    <h2 id="formTitle">Add Employee</h2>
+    <form id="empForm">
+      <input name="firstName" placeholder="First Name *" required />
+      <input name="lastName" placeholder="Last Name *" required />
+      <input name="email" placeholder="Email *" type="email" required />
+      <select name="department" required>
+        <option value="">Select Department</option>
+        <option>Engineering</option>
+        <option>Sales</option>
+        <option>Marketing</option>
+        <option>HR</option>
+        <option>Finance</option>
+        <option>Operations</option>
+      </select>
+      <input name="role" placeholder="Role *" required />
+      <div class="modal-actions">
+        <button type="submit" class="primary">Add Employee</button>
+        <button type="button" onclick="history.back()">Cancel</button>
+      </div>
+    </form>
+  </div>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

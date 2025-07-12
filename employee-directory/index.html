@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Employee Directory</h1>
+    <div class="actions">
+  <input type="text" id="search" placeholder="🔍 Search by name or email..." />
+  <button id="filterBtn">⚙️ Filters</button>
+  <select id="sortBy">
+    <option value="">Sort By</option>
+    <option value="firstName">First Name</option>
+    <option value="lastName">Last Name</option>
+    <option value="department">Department</option>
+    <option value="role">Role</option>
+  </select>
+  <select id="perPage">
+  <option value="10">10 per page</option>
+  <option value="25">25 per page</option>
+  <option value="50">50 per page</option>
+</select>
+
+
+
+  <button id="addEmployeeBtn" class="primary">+ Add Employee</button>
+</div>
+
+
+  </header>
+
+  <main>
+    <div id="employeeList" class="grid"></div>
+    <div id="pagination" class="pagination"></div>
+  </main>
+
+  <!-- Filter Sidebar -->
+  <aside id="filterSidebar" class="sidebar hidden">
+    <h3>Filter Employees</h3>
+    <input id="filterName" type="text" placeholder="First Name..." />
+    <select id="filterDepartment">
+      <option value="">All Departments</option>
+      <option>Engineering</option>
+      <option>Sales</option>
+      <option>Marketing</option>
+      <option>HR</option>
+      <option>Finance</option>
+      <option>Operations</option>
+      <option>IT</option>
+      <option>Academics</option>
+      <option>Research</option>
+      <option>Administration</option>
+    </select>
+    <select id="filterRole">
+      <option value="">All Roles</option>
+      <option>Frontend Developer</option>
+      <option>Backend Developer</option>
+      <option>Full Stack Developer</option>
+      <option>Python Developer</option>
+      <option>Data Scientist</option>
+      <option>DevOps Engineer</option>
+      <option>Marketing Manager</option>
+      <option>Lecturer</option>
+      <option>HR Specialist</option>
+      <option>Content Writer</option>
+    </select>
+    <button id="applyFilters">Apply Filters</button>
+    <button id="clearFilters">Clear All</button>
+    <button id="closeFilter">×</button>
+  </aside>
+
+  <!-- Add Employee Modal -->
+  <div id="addModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Add Employee</h2>
+      <form id="addForm">
+        <input name="firstName" placeholder="First Name *" required />
+        <input name="lastName" placeholder="Last Name *" required />
+        <input name="email" placeholder="Email *" type="email" required />
+        <select name="department" required>
+          <option value="">Select Department</option>
+          <option>Engineering</option>
+          <option>Sales</option>
+          <option>Marketing</option>
+          <option>HR</option>
+          <option>Finance</option>
+          <option>Operations</option>
+          <option>IT</option>
+          <option>Academics</option>
+          <option>Research</option>
+          <option>Administration</option>
+        </select>
+        <select name="role" required>
+          <option value="">Select Role</option>
+          <option>Frontend Developer</option>
+          <option>Backend Developer</option>
+          <option>Full Stack Developer</option>
+          <option>Python Developer</option>
+          <option>Data Scientist</option>
+          <option>DevOps Engineer</option>
+          <option>Marketing Manager</option>
+          <option>Lecturer</option>
+          <option>HR Specialist</option>
+          <option>Content Writer</option>
+        </select>
+        <div class="modal-actions">
+          <button type="submit" class="primary">Add</button>
+          <button type="button" id="cancelAdd">Cancel</button>
+        </div>
+      </form>
+    </div>
+    
+  </div>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
